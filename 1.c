@@ -1,19 +1,18 @@
 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 #define MAX 100
 
-// Estructura para guardar los datos de la persona
+
 typedef struct {
     char nombre[MAX];
     char apellido[MAX];
     char dni[MAX];
 } Persona;
 
-// Función para agregar una persona al archivo
+
 void agregarPersona() {
     FILE *archivo = fopen("personas.txt", "a");
     if (archivo == NULL) {
@@ -36,7 +35,7 @@ void agregarPersona() {
     printf("Datos guardados exitosamente.\n");
 }
 
-// Función para buscar una persona por DNI
+
 void buscarPorDNI() {
     FILE *archivo = fopen("personas.txt", "r");
     if (archivo == NULL) {
@@ -66,7 +65,7 @@ void buscarPorDNI() {
     fclose(archivo);
 }
 
-// Menú principal
+
 int main() {
     int opcion;
 
@@ -95,8 +94,3 @@ int main() {
 
     return 0;
 }
-		
-		
-		
-	
-		
